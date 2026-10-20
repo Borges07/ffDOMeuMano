@@ -1,0 +1,10 @@
+{
+  "name": "recarga-jogo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "test": "node --test tests/flow.test.cjs",
+    "build": "node scripts/build.cjs"
+  }
+}

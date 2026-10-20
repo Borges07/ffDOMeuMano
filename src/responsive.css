@@ -1,0 +1,31 @@
+/* Limites explícitos evitam que o tamanho intrínseco alargue o grid no Safari. */
+html{width:100%;overflow-x:hidden}
+body{width:100%;min-width:0;overflow-x:hidden}
+#app,main,.gate-inner,.intro-content,.quiz-column,.store-header-inner,.store-content,.purchase-inner{min-width:0;max-width:100%}
+.gate{grid-template-columns:minmax(0,1fr);justify-items:center}
+.gate-inner{width:100%;max-width:650px;justify-self:center}
+.login{grid-template-columns:minmax(0,1fr);justify-items:center}
+.login-card{width:100%;max-width:440px}
+img{max-width:100%}
+@media(max-width:700px){
+  .gate{width:100%;padding:40px 24px;min-height:100svh}
+  .gate h1{font-size:clamp(44px,12vw,78px);overflow-wrap:normal}
+  .gate-tag{max-width:calc(100% - 12px)}
+  .gate p{font-size:clamp(16px,4.8vw,19px)}
+  .gate .skew-button{min-width:0;width:min(240px,calc(100% - 24px))}
+  .intro-content>.skew-button{min-width:0;width:min(340px,calc(100% - 24px))}
+  .mission-perks{grid-template-columns:repeat(2,minmax(0,1fr));line-height:1.6}
+  .mission-perks span{overflow-wrap:anywhere}
+  .login-card{min-width:0;width:100%;max-width:400px}
+  .question-title{overflow-wrap:anywhere}
+  .answer{min-width:0}
+  .answer>span:last-child{min-width:0;overflow-wrap:anywhere}
+  .store-header-inner{gap:8px}
+  .merchant{white-space:normal}
+  .store-header-label{min-width:0}
+  .game-list{gap:16px}
+  .game-tile{min-width:0;flex:0 1 100px}
+  .purchase-summary{min-width:0}
+  .buy-button{min-width:100px;flex-shrink:0}
+  .purchase-bar{padding-bottom:max(14px,env(safe-area-inset-bottom))}
+}
